@@ -10,6 +10,7 @@
 body {
   font-family: 'Poppins', 'Roboto', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   color: #243029;
+  scroll-behavior: smooth;
 }
 
 .navbar-light .navbar-nav .nav-link.active,
@@ -37,3 +38,23 @@ body {
 
 .footer-link { color: #dbe7e0; text-decoration: none; }
 .footer-link:hover { color: #fff; text-decoration: underline; }
+
+/* Card & button hover effects */
+.card { border-radius: 12px; transition: transform .25s ease, box-shadow .25s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,.12); }
+.btn { border-radius: 12px; transition: transform .2s ease, box-shadow .2s ease; }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(13,104,50,.2); }
+
+/* AOS helper spacing */
+[data-aos] { will-change: transform, opacity; }
+
+/* Dark mode */
+.dark body { background:#0e1411; color:#e7efe9; }
+.dark .navbar, .dark .card, .dark .bg-white { background:#111a15 !important; color:#e7efe9; }
+.dark .card, .dark .navbar { border-color: rgba(255,255,255,.08) !important; }
+.dark .footer-link { color:#b7c7c0; }
+
+/* Parallax hero (via background attachment on wide screens) */
+@media (min-width: 992px) {
+  .bg-hero-parallax { background-attachment: fixed; }
+}

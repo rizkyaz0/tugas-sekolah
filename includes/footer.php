@@ -47,5 +47,16 @@
   </div>
 </footer>
 <script src="<?= esc(base_url('assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js')) ?>"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true });
+  // Simple parallax for hero
+  document.addEventListener('scroll', function(){
+    var el = document.querySelector('.bg-hero');
+    if(!el) return;
+    var y = window.scrollY * 0.3;
+    el.style.backgroundPosition = 'center calc(50% + '+(y)+'px)';
+  }, { passive:true });
+</script>
 </body>
 </html>

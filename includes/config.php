@@ -29,7 +29,7 @@ function base_url(string $path = ''): string {
 // --- Database configuration (use env if available) ---
 $DB = [
     'host'    => $_ENV['DB_HOST'] ?? '127.0.0.1',
-    'name'    => $_ENV['DB_NAME'] ?? 'pn_subang',
+    'name'    => $_ENV['DB_NAME'] ?? 'pengadilan_subang',
     'user'    => $_ENV['DB_USER'] ?? 'root',
     'pass'    => $_ENV['DB_PASS'] ?? '',
     'charset' => 'utf8mb4',
@@ -38,8 +38,8 @@ $DB = [
 // --- Admin authentication (simple) ---
 // Change these in production!
 $ADMIN = [
-    'username' => $_ENV['ADMIN_USERNAME'] ?? 'admin',
-    'password' => $_ENV['ADMIN_PASSWORD'] ?? 'admin123', // simple demo credential
+    'email'    => $_ENV['ADMIN_EMAIL'] ?? 'admin@gmail.com',
+    'password' => $_ENV['ADMIN_PASSWORD'] ?? 'admin#1234', // dummy credential for development
 ];
 
 // --- App constants ---
